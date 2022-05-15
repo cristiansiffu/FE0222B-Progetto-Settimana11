@@ -1,0 +1,56 @@
+.container {
+  color: #fff;
+}
+
+.card {
+  background: rgba(50, 50, 50, 0.3);
+  border: 1px solid #a3a3a3;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+img {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 15px;
+  border: 1px solid #000;
+}
+
+.card-title, .card-text {
+  text-shadow: 1px 1px #000, -1px -1px #000, 0px 1px #000, 1px 0px #000, 0px -1px #000, -1px 0px #000;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 1.4rem;
+  padding: 0.5rem;
+}
+
+.price {
+  text-align: end;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #dc143c;
+  text-shadow: 1px 1px 2px #bba14f, 0 0 1em #000, 0 0 0.2em #000;
+}
+
+a {
+  background-color: rgba(200, 200, 200, 0.9);
+  background-position: contain;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  padding: 1rem;
+  text-decoration: none;
+  color: #bba14f;
+  text-shadow: 1px 1px #000, -1px -1px #000, 0px 1px #000, 1px 0px #000, 0px -1px #000, -1px 0px #000;
+  font-size: 1.4rem;
+  font-weight: bold;
+}

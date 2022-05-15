@@ -1,0 +1,59 @@
+<div class="container">
+  <ng-container *ngIf="cart.length > 0; else empty">
+    <div class="container d-flex justify-content-evenly align-items-center flex-wrap mt-5">
+      <div *ngFor="let product of cart">
+        <div class="card m-3 p-3" style="width: 17.5rem; height: 32.5rem;">
+          <img src="../../assets/img/tes{{product.id}}.png" style="width: 250px; height: 300px;" class="card-img-top rounded mx-auto d-block">
+          <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text price">{{product.price}}</p>
+            <button class="btn btn-danger w-100" (click)="delete(product)">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="mt-3">Complete your purchase:</h1>
+    <form [formGroup]="form" (ngSubmit)="completeOrder()">
+
+      <div formGroupName="userInfo">
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" formControlName="name" id="name" class="form-control">
+          <span class="text-danger" *ngIf="checkName('userInfo.name')?.invalid && checkName('userInfo.name')?.touched">
+            <ng-container *ngIf="getNameErrors('userInfo.name', 'required')">Insert name.</ng-container>
+            <ng-container *ngIf="getNameErrors('userInfo.name', 'pattern')">Must contain letters.</ng-container>
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" formControlName="password" id="password" class="form-control">
+          <span class="text-danger"
+            *ngIf="checkPassword('userInfo.password')?.invalid && checkPassword('userInfo.password')?.touched">
+            <ng-container *ngIf="getPasswordErrors('userInfo.password', 'required')">Insert password.</ng-container>
+            <ng-container *ngIf="getPasswordErrors('userInfo.password', 'pattern')">Must contain only letters and
+              numbers.</ng-container>
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" formControlName="address" id="address" class="form-control">
+          <span class="text-danger"
+            *ngIf="checkAddress('userInfo.address')?.invalid && checkAddress('userInfo.address')?.touched">
+            <ng-container *ngIf="getAddressErrors('userInfo.address', 'required')">Insert address.</ng-container>
+            <ng-container *ngIf="getAddressErrors('userInfo.address', 'pattern')">Must contain only letters and
+              numbers.</ng-container>
+          </span>
+        </div>
+
+      </div>
+      <button type="submit" [disabled]="!form.valid" class="btn btn-success w-100 my-3">Confirm</button>
+    </form>
+  </ng-container>
+  <ng-template #empty>
+    <h2 class="m-3 empty">Your cart is empty</h2>
+  </ng-template>
+</div>

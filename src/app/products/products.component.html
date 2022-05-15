@@ -1,0 +1,12 @@
+<div class="container d-flex justify-content-evenly align-items-center flex-wrap mt-5">
+  <div *ngFor="let product of products">
+    <div class="card m-3 p-3" style="width: 17.5rem; height: 32.5rem;">
+      <img src="../../assets/img/tes{{product.id}}.png" style="width: 250px; height: 300px;" class="card-img-top rounded mx-auto d-block" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text">"{{product.description}}"</p>
+        <a class="card-link" type="button" [routerLink]="['/products-details', product.id]" routerLinkActive="active">See more...</a>
+      </div>
+    </div>
+  </div>
+</div>

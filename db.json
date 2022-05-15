@@ -1,0 +1,74 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "The Elder Scrolls: Arena",
+      "price": 9,
+      "description": "THE LEGEND BEGINS",
+      "details": "The imperial battlemage Jagar Tharn betrays the Emperor Uriel Septim by imprisoning him in an alternate dimension, then assuming the Emperor’s identity and place on the throne. A lone prisoner must travel to Tamriel’s most famous and dangerous sites to collect the shattered Staff of Chaos, save the Emperor and free the Empire."
+    },
+    {
+      "id": 2,
+      "name": "The Elder Scrolls: Daggerfall",
+      "price": 19,
+      "description": "THE GREAT MACHINE AWAKENS",
+      "details": "The ancient golem Numidium, a powerful weapon once used by the great Tiber Septim to unify Tamriel, has been found in Iliac Bay. In the power struggle that follows, the King of Daggerfall is murdered and his spirit haunts the kingdom. The Emperor Uriel Septim VII sends his champion to the province of High Rock to put the king’s spirit to rest and ensure that the golem does not fall into the wrong hands."
+    },
+    {
+      "id": 3,
+      "name": "The Elder Scrolls: Morrowind",
+      "price": 29,
+      "description": "THE PROPHECY WILL BE FULFILLED",
+      "details": "The Lost Prophecies speak of the Incarnate, a reincarnation of the Dunmer hero Nerevar, arriving in Morrowind to rid the land of a dark curse. To fulfill this prophecy, the Emperor sends an unknown and uncertain imperial courier to the island of Vvardenfell. Through a series of dangerous and magical quests, this unknown courier is transformed into one of the Emprire’s most enduring heroes."
+    },
+    {
+      "id": 4,
+      "name": "The Elder Scrolls: Oblivion",
+      "price": 999,
+      "description": "FROM THE ASHES OF AN EMPIRE, A HERO WILL RISE",
+      "details": "In the shadow of evil, a hero will rise from the ashes of a fallen empire. The gates have been opened, and the battle has begun. Only one thing can save the world from Mehrunes Dagon and the demonic hordes of Oblivion. The true heir of the Septim line must be found and restored to the Imperial throne. The fate of the world rests in the hands of one. Find him, and shut the jaws of Oblivion."
+    },
+    {
+      "id": 5,
+      "name": "The Elder Scrolls: Skyrim",
+      "price": 59,
+      "description": "DRAGONBORN",
+      "details": "With this official add-on for The Elder Scrolls V: Skyrim, journey off the coast of Morrowind, to the island of Solstheim. Encounter new towns, dungeons, and quests, as you traverse the ash wastes and glacial valleys of this new land. Become more powerful with shouts that bend the will of your enemies and even tame dragons. Your fate, and the fate of Solstheim, hangs in the balance as you face off against your deadliest adversary."
+    },
+    {
+      "id": 6,
+      "name": "The Elder Scrolls Online",
+      "price": 19,
+      "description": "THIS IS ESO",
+      "details": "Go anywhere, do anything, and play your way in The Elder Scrolls Online, the award-winning online RPG set in the Elder Scrolls universe."
+    },
+    {
+      "id": 7,
+      "name": "The Elder Scrolls: Blades",
+      "price": 19,
+      "description": "QUEST. CREATE. CONQUER.",
+      "details": "From Bethesda Game Studios, the award-winning creators of Skyrim, comes The Elder Scrolls: Blades: a classic dungeon crawler reimagined."
+    },
+    {
+      "id": 8,
+      "name": "The Elder Scrolls: Greymoor",
+      "price": 19,
+      "description": "A STRATEGY CARD GAME",
+      "details": "The Elder Scrolls: Greymoor is a competitive strategy card game set in the Elder Scrolls universe. Craft decks featuring intimidating abilities and powerful allies from across all of Tamriel as you take on story-rich campaigns as well as other players."
+    }
+  ],
+  "prices": [
+    {
+      "type": "1-Giorno",
+      "price": 25.99
+    },
+    {
+      "type": "2-Giorni",
+      "price": 9.99
+    },
+    {
+      "type": "5-Giorni",
+      "price": 2.99
+    }
+  ]
+}

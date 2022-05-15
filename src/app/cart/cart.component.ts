@@ -20,6 +20,7 @@ export class CartComponent implements OnInit {
         private formBuilder: FormBuilder
     ) {}
 
+    payment: boolean = false;
     form!: FormGroup;
 
     subPrices!: Subscription;
@@ -48,6 +49,10 @@ export class CartComponent implements OnInit {
         }
     }
 
+    checkPayment(){
+        this.payment = true
+    }
+
     // Take the inputs values to solve the payment and clear the form
 
     completeOrder(form: any) {
@@ -56,7 +61,7 @@ export class CartComponent implements OnInit {
             this.productsService.emptyCart(); // Remove all items from cart
             this.cart = this.productsService.getCart(); // Refresh cart
             this.form.reset(); // Reset previous input values
-        }, 3000);
+        }, 5000);
     }
 
     // Remove an item from cart

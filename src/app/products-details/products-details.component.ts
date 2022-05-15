@@ -6,48 +6,47 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root',
 })
-
 @Component({
-  selector: 'app-products-details',
-  templateUrl: './products-details.component.html',
-  styleUrls: ['./products-details.component.scss']
+    selector: 'app-products-details',
+    templateUrl: './products-details.component.html',
+    styleUrls: ['./products-details.component.scss'],
 })
-
 export class ProductsDetailsComponent implements OnInit {
-
-  constructor( private productsService: ProductsService, private router: ActivatedRoute ) { }
+    constructor(
+        private productsService: ProductsService,
+        private router: ActivatedRoute
+    ) {}
 
     id!: number;
     sub!: Subscription;
     arrayProducts!: Products;
 
     ngOnInit(): void {
-      this.sub = this.router.params.subscribe((params: Params) => {
-        this.id = +params['id'];
-        console.log(this.id)
-        this.productsService.getProduct(this.id).subscribe((products) => {
-          this.arrayProducts = products;
-          console.log(products);
+        this.sub = this.router.params.subscribe((params: Params) => {
+            this.id = +params['id'];
+            console.log(this.id);
+            this.productsService.getProduct(this.id).subscribe((products) => {
+                this.arrayProducts = products;
+                console.log(products);
+            });
         });
-      });
     }
 
     addToCart() {
-      this.sub = this.router.params.subscribe((params: Params) => {
-        this.id = +params['id'];
-        console.log(this.id)
-        this.productsService.getProduct(this.id).subscribe((products) => {
-          this.arrayProducts = products;
-          this.productsService.cart.push(products);
-          this.productsService.counter();
+        this.sub = this.router.params.subscribe((params: Params) => {
+            this.id = +params['id'];
+            console.log(this.id);
+            this.productsService.getProduct(this.id).subscribe((products) => {
+                this.arrayProducts = products;
+                this.productsService.cart.push(products);
+                this.productsService.counter();
+            });
         });
-      });
     }
 
     ngOnDestroy() {
-      this.sub.unsubscribe;
+        this.sub.unsubscribe;
     }
-
 }

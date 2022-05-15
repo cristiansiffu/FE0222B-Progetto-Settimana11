@@ -2,13 +2,12 @@
     <div class="container-fluid">
         <a class="navbar-brand px-5" href="javascript:void(0)">Bethesda</a>
         <div class="collapse navbar-collapse row" id="navbarNavAltMarkup">
-            <div class="navbar-nav justify-content-start">
+            <div class="navbar-nav justify-content-end">
                 <a class="nav-link active px-5" [routerLink]="['/']" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{exact: true}">Games</a>
-              <a class="nav-link px-5" [routerLink]="['/cart']" routerLinkActive="active">Cart <i class="bi bi-cart-fill"></i><span class="counter">{{productsService.count}}</span></a>
+                    [routerLinkActiveOptions]="{exact: true}">Games <i class="bi bi-controller"></i></a>
+                <a class="nav-link px-5" [routerLink]="['/cart']" routerLinkActive="active">Cart <i
+                        class="bi bi-cart-fill"></i><span class="counter">{{productsService.count}}</span></a>
             </div>
         </div>
     </div>
 </nav>
-
-

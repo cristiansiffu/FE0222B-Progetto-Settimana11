@@ -4,21 +4,20 @@ import { ProductsService } from '../service/products.service';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss'],
+    selector: 'app-products',
+    templateUrl: './products.component.html',
+    styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit {
+    constructor(private productsService: ProductsService) {}
 
-  constructor( private productsService: ProductsService ) {}
+    sub!: Subscription;
+    products!: Products[];
 
-  sub!: Subscription;
-  products!: Products[];
-
-  ngOnInit(): void {
-    this.sub = this.productsService.get().subscribe( products => {
-      this.products = products;
-      console.log(this.products);
-    });
-  }
+    ngOnInit(): void {
+        this.sub = this.productsService.get().subscribe((products) => {
+            this.products = products;
+            console.log(this.products);
+        });
+    }
 }

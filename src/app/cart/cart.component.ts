@@ -49,10 +49,6 @@ export class CartComponent implements OnInit {
         }
     }
 
-    checkPayment(){
-        this.payment = true
-    }
-
     // Take the inputs values to solve the payment and clear the form
 
     completeOrder(form: any) {

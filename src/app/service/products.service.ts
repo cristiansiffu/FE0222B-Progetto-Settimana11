@@ -10,7 +10,6 @@ export class ProductsService {
 
     constructor(private http: HttpClient) {}
 
-    public i: number = 0;
     public count: number = 0;
     public cart: Products[] = [];
 

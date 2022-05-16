@@ -17,7 +17,7 @@
 
         <form [formGroup]="form" (ngSubmit)="completeOrder(f)" #f="ngForm">
 
-                <div class="container my-5 mx-auto order" *ngIf="payment === true">
+                <div class="container my-5 mx-auto order" *ngIf="f.submitted === true">
                     <div class="container my-5 mx-auto order">
                         <h1>Congratulations {{form.value.userInfo.name}}!</h1>
                         <h3>Your order has been sent to your address: <span>{{form.value.userInfo.address}}</span></h3>
@@ -64,7 +64,7 @@
                 </div>
 
             </div>
-            <button type="submit" [disabled]="!form.valid" (click)="checkPayment()" class="btn btn-success w-100 my-3">Confirm</button>
+            <button type="submit" [disabled]="!form.valid" class="btn btn-success w-100 my-3">Confirm</button>
         </form>
     </ng-container>
 
